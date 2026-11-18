@@ -6,7 +6,7 @@ using namespace std;
 
 void simulacion(){
 
-cout << "--- RESULTADOS DE LOS PARTIDOS ---";
+cout << "--- RESULTADOS DE LOS PARTIDOS ---" << endl;
 
 
 
