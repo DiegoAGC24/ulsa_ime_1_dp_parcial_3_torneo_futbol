@@ -18,8 +18,16 @@
 ## 2. Opciones del menú
 
 Escriban las opciones del menú en el orden en que aparecen en el programa.
+1. Registrar equipo
+2. Mostrar equipos
+3. Simular torneo
+4. Mostrar resultados
+5. Mostrar tabla de posiciones
+6. Mostrar campeon
+7. Consultar equipo
+8. Mostrar matriz de enfrentamientos
+9. Salir
 
-[Inserta aquí tu respuesta]
 
 ## 3. Cómo compilar y ejecutar
 
@@ -44,7 +52,7 @@ Para ejecutar en Windows:
 ## 4. Tipos de datos abstractos (TDA)
 
 Describan cada TDA que diseñaron como registro (`struct`): qué datos guarda, qué operaciones tiene y por qué.
-
+*Struct Registro_equipos: lo que hace es tomar los nombres que luego se le sumo un for para que sean 6 equipos.
 [Inserta aquí tu respuesta]
 
 ## 5. Reglas del programa
