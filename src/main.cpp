@@ -35,7 +35,15 @@ int main() {
   std::cout << "TORNEO DE FUTBOL" << std::endl;
     // TODO: menu que se repite hasta elegir "Salir".
     //       Una opcion que no existe se rechaza con un mensaje.
+  while (true)
+    {
+        mostrarMenu();
 
+        int opcion = leerEntero("Selecciona una opcion:");
+        std::cout << "Valor leido: " << opcion << std::endl;
+        if (opcion < 0 || opcion > 9)
+        {
+            std::cout << "Numero no valido\n";
     // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
     //
     // Paso 1: elegir cada reporte sin equipos registrados (rechazos).
