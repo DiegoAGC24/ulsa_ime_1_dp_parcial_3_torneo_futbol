@@ -44,6 +44,19 @@ int main() {
         if (opcion < 0 || opcion > 9)
         {
             std::cout << "Numero no valido\n";
+              }
+        switch (opcion)
+        {
+        case 1:
+        {
+            std::cout << "\nRegistrar equipos\n";
+            for (int i = 0; i < 6; i++)
+            {
+                std::cout << "Nombre del equipo " << i + 1 << ": ";
+                std::getline(std::cin, r[i].nombre);
+            }
+        }
+        break;
     // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
     //
     // Paso 1: elegir cada reporte sin equipos registrados (rechazos).
