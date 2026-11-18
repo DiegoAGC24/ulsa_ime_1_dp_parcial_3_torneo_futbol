@@ -74,6 +74,7 @@ int main() {
     // Paso 10: teclear una opcion de menu inexistente (rechazo) y salir.
     // Paso 11: ejecutar de nuevo el programa en modo aleatorio y mostrar
     //          resultados, tabla y campeon.
-
+    }
+}
     return 0;
 }
