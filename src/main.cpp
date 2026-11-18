@@ -30,10 +30,9 @@ void mostrarMenu()
 
 int main() {
 
-
     // TODO: declaren aqui los datos del torneo.
     //       No usen variables globales.
-
+  std::cout << "TORNEO DE FUTBOL" << std::endl;
     // TODO: menu que se repite hasta elegir "Salir".
     //       Una opcion que no existe se rechaza con un mensaje.
 
