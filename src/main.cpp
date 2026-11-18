@@ -14,10 +14,12 @@
 
 #include "utilerias.h"
 #include "torneo.h"
-
+#include "simulacion.h"
 // TODO: incluyan aqui el archivo .h de cada modulo.
 
 int main() {
+
+    simulacion();
     // TODO: declaren aqui los datos del torneo.
     //       No usen variables globales.
 
