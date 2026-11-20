@@ -8,16 +8,16 @@ using namespace std;
 void simulacion(){
 
 cout << "--- RESULTADOS DE LOS PARTIDOS ---" << endl;
-cout << r[0].nombre << endl;
-cout << r[1].nombre << endl;
-cout << r[2].nombre << endl;
-cout << r[3].nombre << endl;
-cout << r[4].nombre << endl;
-cout << r[5].nombre << endl;
+
+
+for(int i = 0; i < 6; i++)
+{
+     for(int j = i + 1; j < 6; j++)
+     {
+cout << r[i].nombre << " vs " << r[j].nombre << endl;
+     }
+  }
 }
-
-
-
 
 
 
