@@ -42,5 +42,6 @@ struct Registro_equipos {
 Registro_equipos r[6];
 
 
+
 // ---------- Funciones comunes (equipo) ----------
 // Escriban aqui las funciones que varios modulos comparten.

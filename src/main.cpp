@@ -15,7 +15,7 @@
 #include "utilerias.h"
 #include "torneo.h"
 #include "simulacion.h"
-
+#include "torneo.h"
 
 void mostrarMenu()
 {
@@ -66,12 +66,24 @@ int main() {
         break;
   
 case 3:
-{
-   
-    cout << "ENTRE AL CASE 3\n";
-    simulacion();
+{ 
+    bool faltanequipos = false;
+
+    for(int i = 0; i < 6; i++){
+    if(r[i].nombre.empty()){
+        faltanequipos = true;
+        break;
+    }
 }
-break;
+if(faltanequipos == true){
+    cout << "Error: Primero registra todos los equipos.\n";
+} else {
+    std::cout << "ENTRE AL CASE 3\n";
+    simulacion();
+   }
+   break;
+}
+
     // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
     //
     // Paso 1: elegir cada reporte sin equipos registrados (rechazos).
@@ -88,9 +100,10 @@ break;
     // Paso 9: consultar un equipo existente y uno inexistente (rechazo).
     // Paso 10: teclear una opcion de menu inexistente (rechazo) y salir.
     // Paso 11: ejecutar de nuevo el programa en modo aleatorio y mostrar
-    //          resultados, tabla y campeon.
-    }
-    
+    //          resultados, tabla y campeon.}
 }
+    }
     return 0;
 }
+    
+
