@@ -53,18 +53,25 @@ int main() {
         case 1:
         {
             std::cout << "\nRegistrar equipos\n";
-            for (int i = 0; i < 6; i++)
+            for (int k = 0; k < 6; k++)
             {
-                std::cout << "Nombre del equipo " << i + 1 << ": ";
-                std::getline(std::cin, r[i].nombre);
+                std::cout << "Nombre del equipo " << k + 1 << ": ";
+                std::getline(std::cin, r[k].nombre);
             }
 
-        case 3:
-        simulacion();
+        
          
 
         }
         break;
+  
+case 3:
+{
+   
+    cout << "ENTRE AL CASE 3\n";
+    simulacion();
+}
+break;
     // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
     //
     // Paso 1: elegir cada reporte sin equipos registrados (rechazos).
@@ -83,6 +90,7 @@ int main() {
     // Paso 11: ejecutar de nuevo el programa en modo aleatorio y mostrar
     //          resultados, tabla y campeon.
     }
+    
 }
     return 0;
 }
