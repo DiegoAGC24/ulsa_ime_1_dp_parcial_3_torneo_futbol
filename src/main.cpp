@@ -18,6 +18,7 @@
 #include "torneo.h"
 #include "BuscarEquipo.h"
 #include "escenario_prueba.h"
+#include "ResultadosPartidos.h"
 
 void imprimirLinea(int largo, char simbolo)
 {
