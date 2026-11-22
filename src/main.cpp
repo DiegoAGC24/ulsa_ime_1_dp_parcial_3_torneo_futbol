@@ -32,7 +32,7 @@ void mostrarMenu()
 // TODO: incluyan aqui el archivo .h de cada modulo.
 
 int main() {
-    
+
     // TODO: declaren aqui los datos del torneo.
     //       No usen variables globales.
   std::cout << "TORNEO DE FUTBOL" << std::endl;
@@ -64,7 +64,11 @@ int main() {
 
         }
         break;
-  
+    case 2:
+    {
+
+    break;
+    }
 case 3:
 { 
     bool faltanequipos = false;
@@ -78,7 +82,7 @@ case 3:
 if(faltanequipos == true){
     cout << "Error: Primero registra todos los equipos.\n";
 } else {
-    std::cout << "ENTRE AL CASE 3\n";
+    std::cout << "ENTRO AL CASO 3\n";
     simulacion();
    }
    break;
