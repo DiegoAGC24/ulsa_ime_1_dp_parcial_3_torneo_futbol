@@ -17,6 +17,11 @@
 #include "simulacion.h"
 #include "torneo.h"
 
+void imprimirLinea(int largo, char simbolo) {
+for (int i = 0; i < largo; i++)
+std::cout << simbolo;
+ }
+
 void mostrarMenu()
 {
     std::cout << "1.-Registrar equipos\n";
@@ -64,11 +69,14 @@ int main()
         case 2:
         {
             std::cout << "\n---Nombre de los equipos---\n";
-            for (int i = 0; i < 6; i++)
+            for (int k = 0; k < 6; k++)
             {
-                std::cout << r[i].nombre << std::endl;
-                break;
+                std::cout << r[k].nombre << std::endl;
             }
+            imprimirLinea(24, '-'); std::cout << std::endl;
+        break;
+        }
+
         case 3:
         {
             bool faltanequipos = false;
