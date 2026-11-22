@@ -35,7 +35,7 @@ int main() {
 
     // TODO: declaren aqui los datos del torneo.
     //       No usen variables globales.
-  std::cout << "TORNEO DE FUTBOL" << std::endl;
+  std::cout << "---TORNEO DE FUTBOL---" << std::endl;
     // TODO: menu que se repite hasta elegir "Salir".
     //       Una opcion que no existe se rechaza con un mensaje.
   while (true)
@@ -52,7 +52,7 @@ int main() {
         {
         case 1:
         {
-            std::cout << "\nRegistrar equipos\n";
+            std::cout << "\n---Registrar equipos---\n";
             for (int k = 0; k < 6; k++)
             {
                 std::cout << "Nombre del equipo " << k + 1 << ": ";
@@ -66,6 +66,7 @@ int main() {
         break;
     case 2:
     {
+std::cout << "\n---Nombre de los equipos---\n";
 
     break;
     }
