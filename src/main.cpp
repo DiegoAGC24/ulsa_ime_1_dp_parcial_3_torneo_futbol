@@ -17,10 +17,11 @@
 #include "simulacion.h"
 #include "torneo.h"
 
-void imprimirLinea(int largo, char simbolo) {
-for (int i = 0; i < largo; i++)
-std::cout << simbolo;
- }
+void imprimirLinea(int largo, char simbolo)
+{
+    for (int i = 0; i < largo; i++)
+        std::cout << simbolo;
+}
 
 void mostrarMenu()
 {
@@ -73,8 +74,9 @@ int main()
             {
                 std::cout << r[k].nombre << std::endl;
             }
-            imprimirLinea(24, '-'); std::cout << std::endl;
-        break;
+            imprimirLinea(24, '-');
+            std::cout << std::endl;
+            break;
         }
 
         case 3:
@@ -119,6 +121,6 @@ int main()
             // Paso 11: ejecutar de nuevo el programa en modo aleatorio y mostrar
             //          resultados, tabla y campeon.}
         }
-        }
-        return 0;
     }
+    return 0;
+}
