@@ -46,6 +46,8 @@ int main()
     // TODO: declaren aqui los datos del torneo.
     //       No usen variables globales.
     int goles[6] = {};
+    Partido resultados[15] = {};
+    int totalPartidos = 0;
     std::cout << "---TORNEO DE FUTBOL---" << std::endl;
     // TODO: menu que se repite hasta elegir "Salir".
     //       Una opcion que no existe se rechaza con un mensaje.
@@ -104,16 +106,28 @@ int main()
             else
             {
                 std::cout << "ENTRO AL CASO 3\n";
-                simulacion();
+                simulacion(resultados, totalPartidos);
             }
             break;
         }
 
+        
         case 4:
         {
-            mostrarResultados();
+                std::cout << "\n---Resultados de los partidos---\n";
+
+            if (totalPartidos == 0)
+            {
+                std::cout << "Error: Primero debes simular el torneo.\n";
+            }
+            else
+            {
+                mostrarResultados(resultados, totalPartidos);
+            }
+
             break;
         }
+
        
             // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
             //

@@ -1,17 +1,9 @@
 
 #pragma once
 
-#include "simulacion.h"
-#include "escenario_prueba.h"
-#include "torneo.h"
-#include "utilerias.h"
-
 #include <iostream>
 #include <string>
-#include <cctype>
-
 using namespace std;
-
 
 // Estructura para guardar cada partido
 struct Partido {
@@ -21,49 +13,40 @@ struct Partido {
     int goles2;
 };
 
-// Arreglo para almacenar los 15 partidos
-inline Partido resultados[15];
-inline int totalPartidos = 0;
-
-// Función para simular y guardar resultados
-inline void simularPartidos(Equipo r[]) {
-
-    if (totalPartidos > 0) {
-        cout << "El torneo ya fue simulado." << endl;
+// Funcion para guardar resultados
+inline void guardarResultado(
+    Partido resultados[],
+    int &totalPartidos,
+    string equipo1,
+    string equipo2,
+    int goles1,
+    int goles2)
+{
+    if (totalPartidos >= 15) {
         return;
     }
 
-    totalPartidos = 0;
+    resultados[totalPartidos].equipo1 = equipo1;
+    resultados[totalPartidos].equipo2 = equipo2;
+    resultados[totalPartidos].goles1 = goles1;
+    resultados[totalPartidos].goles2 = goles2;
 
-    for (int i = 0; i < 6; i++) {
-        for (int j = i + 1; j < 6; j++) {
-
-            int golesj = numeroAleatorio();
-            int golesi = numeroAleatorio();
-
-            // Guardar el resultado
-            resultados[totalPartidos].equipo1 = r[i].nombre;
-            resultados[totalPartidos].equipo2 = r[j].nombre;
-            resultados[totalPartidos].goles1 = golesi;
-            resultados[totalPartidos].goles2 = golesj;
-
-            totalPartidos++;
-
-            // Mostrar el partido
-            cout << r[i].nombre << "      "
-                 << golesi << "---" << golesj
-                 << "      " << r[j].nombre << endl;
-        }
-    }
+    totalPartidos++;
 }
 
-// Función para consultar resultados guardados
-inline void mostrarResultados()
+// Funcion para mostrar resultados
+inline void mostrarResultados(
+    const Partido resultados[],
+    int totalPartidos)
+{
+    if (totalPartidos == 0) {
+        cout << "Primero debes simular el torneo.\n";
+        return;
+    }
 
-    cout << "\nRESULTADOS DEL TORNEO\n";
+    cout << "\n--- RESULTADOS DEL TORNEO ---\n";
 
     for (int i = 0; i < totalPartidos; i++) {
-
         cout << resultados[i].equipo1 << "  "
              << resultados[i].goles1 << " - "
              << resultados[i].goles2 << "  "

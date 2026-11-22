@@ -6,7 +6,13 @@ using namespace std;
 #include "torneo.h"
 #include "ResultadosPartidos.h"
 
-void simulacion(){
+inline void simulacion(Partido resultados[], int &totalPartidos) {
+
+    if (totalPartidos > 0) {
+        cout << "El torneo ya fue simulado." << endl;
+        return;
+    }
+
 
 
 cout << "--- RESULTADOS DE LOS PARTIDOS ---" << endl;
@@ -18,12 +24,15 @@ for(int i = 0; i < 6; i++)
      {
         int golesj = numeroAleatorio();
         int golesi = numeroAleatorio();
-       guardarResultado(
-           r[i].nombre,
-           r[j].nombre,
-           golesi,
-           golesj
-       );
+        
+        guardarResultado(
+            resultados,
+            totalPartidos,
+            r[i].nombre,
+            r[j].nombre,
+            golesi,
+            golesj
+        );
       
      
 
