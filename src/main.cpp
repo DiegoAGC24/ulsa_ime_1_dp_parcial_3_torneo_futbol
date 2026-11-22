@@ -16,6 +16,8 @@
 #include "torneo.h"
 #include "simulacion.h"
 #include "torneo.h"
+#include "BuscarEquipo.h"
+#include "escenario_prueba.h"
 
 void imprimirLinea(int largo, char simbolo)
 {
@@ -42,6 +44,7 @@ int main()
 
     // TODO: declaren aqui los datos del torneo.
     //       No usen variables globales.
+    int goles[6] = {};
     std::cout << "---TORNEO DE FUTBOL---" << std::endl;
     // TODO: menu que se repite hasta elegir "Salir".
     //       Una opcion que no existe se rechaza con un mensaje.
@@ -81,6 +84,8 @@ int main()
 
         case 3:
         {
+
+    
             bool faltanequipos = false;
 
             for (int i = 0; i < 6; i++)
@@ -102,7 +107,7 @@ int main()
             }
             break;
         }
-
+       
             // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
             //
             // Paso 1: elegir cada reporte sin equipos registrados (rechazos).
