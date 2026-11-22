@@ -57,3 +57,16 @@ inline void simularPartidos(Equipo r[]) {
     }
 }
 
+// Función para consultar resultados guardados
+inline void mostrarResultados()
+
+    cout << "\nRESULTADOS DEL TORNEO\n";
+
+    for (int i = 0; i < totalPartidos; i++) {
+
+        cout << resultados[i].equipo1 << "  "
+             << resultados[i].goles1 << " - "
+             << resultados[i].goles2 << "  "
+             << resultados[i].equipo2 << endl;
+    }
+}
