@@ -64,7 +64,7 @@ int main()
         case 2:
         {
             std::cout << "\n---Nombre de los equipos---\n";
-            for (int i = 0; i < MAX_ALUMNOS; i++)
+            for (int i = 0; i < 6; i++)
             {
                 std::cout << r[i].nombre << std::endl;
                 break;
