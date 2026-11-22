@@ -4,6 +4,7 @@
 #include <string>
 using namespace std;
 #include "torneo.h"
+#include "ResultadosPartidos.h"
 
 void simulacion(){
 
@@ -17,6 +18,14 @@ for(int i = 0; i < 6; i++)
      {
         int golesj = numeroAleatorio();
         int golesi = numeroAleatorio();
+       guardarResultado(
+           r[i].nombre,
+           r[j].nombre,
+           golesi,
+           golesj
+       );
+      
+     
 
 cout << r[i].nombre << "      " << golesi << "---" << golesj <<"      " << r[j].nombre  << endl;
      }
