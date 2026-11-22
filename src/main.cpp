@@ -31,14 +31,15 @@ void mostrarMenu()
 }
 // TODO: incluyan aqui el archivo .h de cada modulo.
 
-int main() {
+int main()
+{
 
     // TODO: declaren aqui los datos del torneo.
     //       No usen variables globales.
-  std::cout << "---TORNEO DE FUTBOL---" << std::endl;
+    std::cout << "---TORNEO DE FUTBOL---" << std::endl;
     // TODO: menu que se repite hasta elegir "Salir".
     //       Una opcion que no existe se rechaza con un mensaje.
-  while (true)
+    while (true)
     {
         mostrarMenu();
 
@@ -47,7 +48,7 @@ int main() {
         if (opcion < 0 || opcion > 9)
         {
             std::cout << "Numero no valido\n";
-              }
+        }
         switch (opcion)
         {
         case 1:
@@ -58,57 +59,58 @@ int main() {
                 std::cout << "Nombre del equipo " << k + 1 << ": ";
                 std::getline(std::cin, r[k].nombre);
             }
-
-        
-         
-
         }
         break;
-    case 2:
-    {
-std::cout << "\n---Nombre de los equipos---\n";
+        case 2:
+        {
+            std::cout << "\n---Nombre de los equipos---\n";
+            for (int i = 0; i < MAX_ALUMNOS; i++)
+            {
+                std::cout << r[i].nombre << std::endl;
+                break;
+            }
+        case 3:
+        {
+            bool faltanequipos = false;
 
-    break;
+            for (int i = 0; i < 6; i++)
+            {
+                if (r[i].nombre.empty())
+                {
+                    faltanequipos = true;
+                    break;
+                }
+            }
+            if (faltanequipos == true)
+            {
+                cout << "Error: Primero registra todos los equipos.\n";
+            }
+            else
+            {
+                std::cout << "ENTRO AL CASO 3\n";
+                simulacion();
+            }
+            break;
+        }
+
+            // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
+            //
+            // Paso 1: elegir cada reporte sin equipos registrados (rechazos).
+            // Paso 2: intentar simular sin los 6 equipos (rechazo).
+            // Paso 3: registrar 6 equipos. Durante el registro, teclear un nombre
+            //         repetido con otras mayusculas o minusculas, uno de menos de
+            //         3 caracteres, uno de mas de 15 y uno con acento o enie
+            //         (rechazos).
+            // Paso 4: intentar registrar un equipo mas (rechazo por lista llena).
+            // Paso 5: simular en modo de prueba.
+            // Paso 6: intentar simular de nuevo (rechazo).
+            // Paso 7: mostrar equipos, resultados, tabla y matriz.
+            // Paso 8: mostrar al campeon y elegirlo entre los empatados.
+            // Paso 9: consultar un equipo existente y uno inexistente (rechazo).
+            // Paso 10: teclear una opcion de menu inexistente (rechazo) y salir.
+            // Paso 11: ejecutar de nuevo el programa en modo aleatorio y mostrar
+            //          resultados, tabla y campeon.}
+        }
+        }
+        return 0;
     }
-case 3:
-{ 
-    bool faltanequipos = false;
-
-    for(int i = 0; i < 6; i++){
-    if(r[i].nombre.empty()){
-        faltanequipos = true;
-        break;
-    }
-}
-if(faltanequipos == true){
-    cout << "Error: Primero registra todos los equipos.\n";
-} else {
-    std::cout << "ENTRO AL CASO 3\n";
-    simulacion();
-   }
-   break;
-}
-
-    // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
-    //
-    // Paso 1: elegir cada reporte sin equipos registrados (rechazos).
-    // Paso 2: intentar simular sin los 6 equipos (rechazo).
-    // Paso 3: registrar 6 equipos. Durante el registro, teclear un nombre
-    //         repetido con otras mayusculas o minusculas, uno de menos de
-    //         3 caracteres, uno de mas de 15 y uno con acento o enie
-    //         (rechazos).
-    // Paso 4: intentar registrar un equipo mas (rechazo por lista llena).
-    // Paso 5: simular en modo de prueba.
-    // Paso 6: intentar simular de nuevo (rechazo).
-    // Paso 7: mostrar equipos, resultados, tabla y matriz.
-    // Paso 8: mostrar al campeon y elegirlo entre los empatados.
-    // Paso 9: consultar un equipo existente y uno inexistente (rechazo).
-    // Paso 10: teclear una opcion de menu inexistente (rechazo) y salir.
-    // Paso 11: ejecutar de nuevo el programa en modo aleatorio y mostrar
-    //          resultados, tabla y campeon.}
-}
-    }
-    return 0;
-}
-    
-
