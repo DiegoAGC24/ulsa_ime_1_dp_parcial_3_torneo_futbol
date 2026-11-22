@@ -108,6 +108,12 @@ int main()
             }
             break;
         }
+
+        case 4:
+        {
+            mostrarResultados();
+            break;
+        }
        
             // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
             //
